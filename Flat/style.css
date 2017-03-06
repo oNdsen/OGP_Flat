@@ -117,14 +117,6 @@ hr {
     display: none
 }
 
-.user_menu_link_selected,
-.admin_menu_link_selected {
-    color: #fff!important;
-    border-left-color: #3c8dbc!important;
-    background: #182124!important;
-    text-shadow: none!important
-}
-
 .pull-right {
     margin-top: 3px;
     font-size: 14px!important
@@ -336,7 +328,8 @@ hr {
 }
 
 .menu-bg {
-    float: left
+    float: left;
+    background-color: #2c3b41;
 }
 
 .menu>ul {
@@ -1245,6 +1238,10 @@ p {
     padding-bottom: 10px;
 }
 
+.treeview.active > a {
+	border-left-color: #4875B3;
+}
+
 .treeview.active>a>.fa-angle-left {
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg)
@@ -1257,12 +1254,10 @@ p {
 
 .treeview-sub>li>a.admin_menu_link_selected {
     border-left: none!important;
-    background: #2c3b41!important
 }
 
 .treeview-sub>li>a.user_menu_link_selected {
     border-left: none!important;
-    background: #2c3b41!important
 }
 
 .treeview-sub>li.treeview>a {
@@ -1320,14 +1315,6 @@ p {
     to {
         transform: scale(1.4)
     }
-}
-
-/**LOGIN CSS**/
-.login_header {
-    font-size: 20px !important;
-    text-transform: uppercase;
-    font-weight: 400;
-    padding: 10px 25px 2px 25px;
 }
 
 .edit_avatar [type=file] {
@@ -1422,8 +1409,8 @@ input[name="add_ftp_user"] {
     width: auto !important;
     margin-left: 0px;
 }
-.login_button {
-    width: 320px;
+.forgotp {
+    margin-right: 5px;
 }
 .forgotp a {
     line-height: 36px;
@@ -1447,4 +1434,27 @@ tr0,
 tr1
 {
     padding: 6px 2px;
+}
+
+.login_form {
+	background-color: #fff;
+	width: 350px;
+	margin-top: 50px;
+}
+.login_form h4 {
+	font-size: 16px;
+}
+input[name=ulogin]{
+	margin: 20px 0px 10px;
+}
+input[name=upassword] {
+	margin: 10px 0px;
+}
+input[name=ulogin],
+input[name=upassword]
+{
+	width: 320px;
+}
+input[name=login] {
+	width: 340px;
 }
