@@ -35,6 +35,7 @@ jQuery(function($){
 		/* Login Elements */
 		$("div.main-content").attr('style', 'box-shadow: none;')//Remove unwanted Shadow effect
 		$('div.bloc h4').addClass('login_header'); //Adds classes to main-content
+		$('div.bloc').addClass('login_form');
 		$("div.main-content > table").removeAttr("style"); //Removes style from table.
 		$("div.main-content > table").attr('align', 'center');//Center it.
 		$("div.main-content > table").attr('style', 'padding: 0px 10px 1px 10px;margin-top: 80px;'); //Removes style from table + droping it little down..
