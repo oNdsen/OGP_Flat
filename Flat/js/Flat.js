@@ -263,5 +263,23 @@ jQuery(function($){
 	  
 		reader.readAsDataURL(file);//attempts to read the file in question.
 	});	//body.on.change end.
-	
+
+
+	if(window.location.href.indexOf("home.php?m=ftp") != -1 ){
+		$('iframe').attr('id', 'ftp_iframe');
+		$('iframe').load(function() {
+			$(this).contents().find("body").addClass('ftp_iframe');
+			$(this).contents().find("div").removeAttr("style");	// Remove Style Attribute from all Divs
+			$(this).contents().find("table").removeAttr("style");	// Remove Style Attribute from all Tables
+			$(this).contents().find(".page table").removeAttr("colspan");
+			//$(this).contents().find(".page table").attr('colspan', '3');
+			$(this).contents().find(".page > table > tbody > tr:nth-child(3)").remove();
+
+			$(this).contents().find("link").remove();		// Remove old Stylesheet
+			var css = '<link rel="stylesheet" type="text/css" href="/themes/Flat/style.css">';
+			$(this).contents().find("head").append(css);
+		});
+
+	}
+
 });	//document.ready end
