@@ -74,12 +74,6 @@ b {
     box-shadow: inset 0 0 12px 0 #dbdbdb
 }
 
-/*
-#servermonitor tbody tr.odd td {
-    text-align: center;
-}
-*/
-
 .main-content {
     background: #FFF;
     border-radius: 2px;
@@ -505,7 +499,6 @@ hr {
     border-radius: 2px;
     -moz-border-radius: 2px;
     overflow: hidden;
-    min-height: 135px;
 }
 
 .bloc h4 {
@@ -955,10 +948,6 @@ pre {
     margin-top: 3px;
 }
 
-#server_icon input {
-    display: none;
-}
-
 .monitor-2 div {
     display: inline-block
 }
@@ -1153,6 +1142,10 @@ p {
 
 #servermonitor>tfoot .bloc.right {
     float: right
+}
+
+#servermonitor .maintr td {
+    background-color: #fff;
 }
 
 #datetime>a>img {
@@ -1370,13 +1363,11 @@ p {
 }
 
 /* ********** FORM STYLES *********** */
-select, input, textarea, button,
+select, input, textarea, button, .button,
 .main-content a[href^="?m=modulemanager"]:not(.administration-buttons),
-.main-content a[href^="?m=gamemanager&p=game_monitor&home_id="]:not(.administration-buttons),
-.main-content a[href="?m=user_games"]:not(.administration-buttons)
+.main-content :not(.name) >  a[href^="?m=gamemanager&p=game_monitor"]:not(.administration-buttons),
+.main-content :not(.operations) > a[href^="?m=user_games"]:not(.administration-buttons)
 {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     font-family: 'Roboto';
     color: #444;
     padding: 6px 12px;
@@ -1392,12 +1383,15 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 input[type="file"]::-webkit-file-upload-button,
-button,
+button, .button,
 input[type="image"],
 .main-content a[href^="?m=modulemanager"]:not(.administration-buttons),
-.main-content a[href^="?m=gamemanager&p=game_monitor&home_id="]:not(.administration-buttons),
-.main-content a[href="?m=user_games"]:not(.administration-buttons)
+.main-content :not(.name) > a[href^="?m=gamemanager&p=game_monitor"]:not(.administration-buttons),
+.main-content :not(.operations) > a[href^="?m=user_games"]:not(.administration-buttons)
 {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     text-transform: uppercase;
     background-color: #4875B3;
     border-color: #4875B3;
@@ -1409,13 +1403,15 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="file"]::-webkit-file-upload-button:hover,
 button:hover,
+.button:hover,
 input[type="image"]:hover,
 .main-content a[href^="?m=modulemanager"]:not(.administration-buttons):hover
-.main-content a[href^="?m=gamemanager&p=game_monitor&home_id="]:not(.administration-buttons):hover,
-.main-content a[href="?m=user_games"]:not(.administration-buttons):hover
+.main-content :not(.name) > a[href^="?m=gamemanager&p=game_monitor"]:not(.administration-buttons):hover,
+.main-content :not(.operations) > a[href^="?m=user_games"]:not(.administration-buttons):hover,
+.operations-button:hover
 {
     cursor: pointer;
-    background-color: #395d8f;
+    background-color: #395d8f !important;
     border-color: #365887;
 }
 
@@ -1431,6 +1427,12 @@ input[name="add_ftp_user"] {
     width: auto !important;
     margin-left: 0px;
 }
+
+.button > div {
+    display: inline-block;
+}
+
+
 .forgotp {
     margin-right: 5px;
 }
@@ -1535,4 +1537,18 @@ img[src^="modules/status/include/bar.php?rating="] {
 .ftp_iframe #page-title
 {
 	text-align: center;
+}
+
+.litefm #content > div > table:nth-child(8) tr:hover,
+.litefm #content > div > table:nth-child(8) tr:first-child
+{
+	font-weight: 600;
+}
+
+.litefm #content > div > table:nth-child(8) tr:nth-child(odd) {
+	background-color: #f9f9f9;
+}
+
+.rename {
+	width: auto;
 }
