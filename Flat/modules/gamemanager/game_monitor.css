@@ -1,6 +1,5 @@
 .monitorbutton{
-	display:inline;
-	width:auto !important;
+	display:inline-block;
 }
 .monitorbutton tr td{
 	cursor:pointer;
@@ -8,7 +7,7 @@
 	background-color:#F0F0F6;
 	transition: background-color 0.5s;
 	-webkit-transition: background-color 0.5s;
-	//border: 1px solid grey;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 	width: 125px !important;
 	height:76px !important;
 	background-color: #D7EDF3 !important;

@@ -1,0 +1,48 @@
+.operations-button
+{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-transform: uppercase;
+	background-color: #4875B3;
+	border-color: #4875B3;
+	color: #fff !important;
+	display: inline-block;
+	font-family: 'Roboto';
+	padding: 6px 12px;
+	margin: 0px 5px 5px 5px;
+	border-radius: 1px;
+	font-size: 14px;
+}
+
+.operations-button > div {
+	float: right;
+}
+
+.viewitem {
+	width: 16px;
+}
+
+#content > div > table:nth-child(8) tr:hover,
+#content > div > table:nth-child(8) tr:first-child
+{
+        font-weight: 600;
+}
+
+#content > div > table:nth-child(8) tr:nth-child(odd) {
+        background-color: #f9f9f9;
+}
+
+div[role="dialog"] .ui-dialog-titlebar
+{
+	background-color: #4875B3;
+}
+
+div[role="dialog"] label {
+	font-family: 'Work Sans', Arial, sans-serif;
+}
+
+div[role="dialog"] input {
+	max-width: 90%;
+	margin: 5px 0px;
+}

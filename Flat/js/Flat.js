@@ -30,6 +30,8 @@ document.write("   |   <b>" + hours + ":" + minutes + " " + suffix + "</b>");
 jQuery(function($){
 
 	$('input[type=submit]').removeAttr("style");
+	$('.monitorbutton').removeAttr('align');
+	$('.operations > br').remove();
 
 	if((window.location.href.indexOf("index.php") != -1 && window.location.href.indexOf("index.php?") == -1 ) || $('input[name=ulogin]').length != false) {
 		var username_text = $(".bloc > form > table > tbody > tr:nth-child(2) > td:nth-child(1)").html().replace(':','');
@@ -39,7 +41,7 @@ jQuery(function($){
 		$('div.bloc').addClass('login_form');				// Adding CSS Class to Login Div
 		$("div.main-content").attr('style', 'box-shadow: none;');	// Remove Shadow Effect
 		$("div.main-content > table").removeAttr("style");		// Remove style from table.
-		$("br").remove();						// Remove all BR Tags - WHY BR!!! WHYYYYYYYYYYYYYY
+		$(".login_form br").remove();						// Remove all BR Tags - WHY BR!!! WHYYYYYYYYYYYYYY
 
 		$("div.bloc > form > table > tbody > tr:first").appendTo("div.bloc > form > table > tbody");//droping language tr down.
 		$("div.bloc > form > table > tbody > tr:last").find('td').contents().unwrap();//Removing all Td tags
@@ -283,23 +285,6 @@ jQuery(function($){
 			$(this).contents().find("head").append(css);
 		});
 
-	}
-
-	if(window.location.href.indexOf("home.php?m=litefm") > -1 ){
-		$("body").addClass("litefm");
-		//$(".operations-button").addClass("button");
-		//$(".litefm .button").removeClass("operations-button");
-
-		$('.operations-button')
-			.css('border', 'none')
-			.css('padding', '6px 12px')
-			.css('margin', '0px 5px 5px 5px')
-			.css('background-color', '#4875B3')
-			.css('width', 'auto')
-			.css('color', '#fff')
-			.css('font-family', 'roboto')
-			.css('border-radius', '1px')
-		;
 	}
 
 });	//document.ready end

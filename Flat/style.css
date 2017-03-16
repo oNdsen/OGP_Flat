@@ -854,13 +854,14 @@ table.tablesorter tfoot td {
 
 .failure {
     color: red;
-    text-align: center
+    font-weight: 600;
+    text-align: center;
 }
-src
 
 .success {
     color: green;
-    text-align: center
+    font-weight: 600;
+    text-align: center;
 }
 
 pre {
@@ -956,7 +957,8 @@ pre {
     clear: both;
     position: relative;
     top: 5px;
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    background-color: #fff;
 }
 
 .srvctrl {
@@ -1011,6 +1013,7 @@ p {
     color: #fff;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     margin: 10px 0px;
+    width: 100%;
 }
 
 .player_monitor th {
@@ -1121,13 +1124,18 @@ p {
     width: 320px
 }
 
+.operations > a,
+.operations > form {
+    display: inline-block;
+}
+
 .ts3-add-virtual select {
     max-width: 194px
 }
 
 .server-starting,
-.list_table,
-.main-content :not(.login_form) table {
+.list_table
+{
     width: 100%
 }
 
@@ -1363,9 +1371,9 @@ p {
 }
 
 /* ********** FORM STYLES *********** */
-select, input, textarea, button, .button,
+select, input, textarea, button,
 .main-content a[href^="?m=modulemanager"]:not(.administration-buttons),
-.main-content :not(.name) >  a[href^="?m=gamemanager&p=game_monitor"]:not(.administration-buttons),
+.main-content :not(.name) > a[href^="?m=gamemanager&p=game_monitor"]:not(.administration-buttons),
 .main-content :not(.operations) > a[href^="?m=user_games"]:not(.administration-buttons)
 {
     font-family: 'Roboto';
@@ -1379,11 +1387,11 @@ select, input, textarea, button, .button,
     display: inline-block;
 }
 
+button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
 input[type="file"]::-webkit-file-upload-button,
-button, .button,
 input[type="image"],
 .main-content a[href^="?m=modulemanager"]:not(.administration-buttons),
 .main-content :not(.name) > a[href^="?m=gamemanager&p=game_monitor"]:not(.administration-buttons),
@@ -1398,12 +1406,11 @@ input[type="image"],
     color: #fff !important;
 }
 
+button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="file"]::-webkit-file-upload-button:hover,
-button:hover,
-.button:hover,
 input[type="image"]:hover,
 .main-content a[href^="?m=modulemanager"]:not(.administration-buttons):hover
 .main-content :not(.name) > a[href^="?m=gamemanager&p=game_monitor"]:not(.administration-buttons):hover,
@@ -1417,8 +1424,8 @@ input[type="image"]:hover,
 
 input:focus,
 select:focus,
-textarea:focus,
-button:focus {
+textarea:focus
+{
     outline: none;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
@@ -1537,16 +1544,6 @@ img[src^="modules/status/include/bar.php?rating="] {
 .ftp_iframe #page-title
 {
 	text-align: center;
-}
-
-.litefm #content > div > table:nth-child(8) tr:hover,
-.litefm #content > div > table:nth-child(8) tr:first-child
-{
-	font-weight: 600;
-}
-
-.litefm #content > div > table:nth-child(8) tr:nth-child(odd) {
-	background-color: #f9f9f9;
 }
 
 .rename {
